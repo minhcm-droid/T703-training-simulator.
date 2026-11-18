@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes flowForward {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes spinImpeller {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pipe-flow {
+  stroke-dasharray: 6 6;
+  animation: flowForward 0.8s linear infinite;
+}
+
+.pipe-flow-fast {
+  stroke-dasharray: 8 4;
+  animation: flowForward 0.4s linear infinite;
+}
+
+.impeller-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spinImpeller 1s linear infinite;
+}
+
+/* Custom Scrollbar for DCS Dark Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
